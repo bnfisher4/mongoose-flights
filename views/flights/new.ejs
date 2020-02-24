@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add A Flight</h1>
+    <form action="/flights" method="POST">
+        <label>Airline:</label>
+        <select name="airline">
+            <option value="American">American</option>
+            <option value="Southwest">Southwest</option>
+            <option value="United">United</option>
+        </select>
+        <label>FlightNo:</label>
+        <input type="text" name="flightNo">
+        <label>Departs:</label>
+        <input type="datetime-local" name="departs">
+        <input type="submit" value="Add Flight">
+    </form>
+    <a href="/flights">Go To All Flights</a>
+</body>
+</html>

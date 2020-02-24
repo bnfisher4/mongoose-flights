@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Flights</h1>
+    <fieldset>
+    <table id="list">
+        <thead>
+            <tr>
+                <th>Airline</th>
+                <th>FlightNo</th>
+                <th>Departs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% flights.forEach(function(f) { %>
+                <tr>
+                    <td><%= f.airline %></td>
+                    <td><%= f.flightNo %></td>
+                    <td><%= new Date(f.departs).toLocaleString() %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    </fieldset>
+    <a href="/flights/new">Add New Flight</a>
+</body>
+</html>
