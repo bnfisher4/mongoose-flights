@@ -32,7 +32,7 @@
             <%= flight.arrival.toLocaleString() %></li>
         </ul>
     <% }) %> 
-
+    
     <form action="/flights/<%= flight._id %>/destinations" method="POST">
         <label>Destination</label>
         <select name="airport">
@@ -46,6 +46,18 @@
         <input name="arrival" type="datetime-local">
         <input type="submit" value="submit">
     </form>
+    <h1>Tickets</h1>
+        <% tickets.forEach(t => { %>
+            <ul>
+                <li>
+                    Seat: <%= t.seat %>
+                    Ticket: <%= t.price %>
+                </li>
+            </ul>
+                
+        <% }) %>
+
+    <a href="/flights/<%= flight._id %>/tickets/new">Add A Ticket</a></br>
     <a href="/flights">Back To All Flights</a>
 </body>
 </html>
